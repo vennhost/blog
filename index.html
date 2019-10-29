@@ -292,7 +292,7 @@
                 </div><!-- /.blog-post -->
 
                 <nav class="blog-pagination">
-                    <a class="btn btn-outline-primary" href="#">Older</a>
+                    <a onclick="removePost()" class="btn btn-outline-primary" href="#">Older</a>
                     <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
                 </nav>
 
@@ -383,11 +383,25 @@
         console.log(trimmedPost)
         }
     }
+
+    
+        function removePost() {
+            var removeButton = document.querySelector("nav a .btn-outline-primary");
+
+                removeButton.addEventListener("click", removePost);
+            var blogPosts = document.getElementsByClassName("blog-post");
+            for (var i = 0; i < blogPost.lenght; i++)
+
+            var last = blogPosts[i-1];
+                list.removeChild(last);
+        }
+
+
     window.onload = function() {
         trimPost
     }
 
-    
+
     </script>
 </body>
 
