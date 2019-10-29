@@ -363,16 +363,31 @@
 
     function addNavItem() {
         var nav = document.getElementsByClassName('nav');
-        var navItem = document.createElement('a');
+        nav.foreach(nav)
+            var navItem = document.createElement('a');
         navItem.className = 'p-2 text-muted';
         navItem.href = '#'
         var navName = 'Advert';
-        navItem.appendChild(navName);
-        console.log(nav);
+        nav.appendChild(navItem);
+        navItem.appendChild(navName)
+        
+        
+        
+    }
+
+    function trimPost() {
+        var blogPost = document.getElementByClassName("blog-post").innerHTML;
+        var postLenght = 150
+        for (var i = 0; i < blogPost.lenght; i++) {
+        var trimmedPost = blogPost[i].substring(0, postLenght);
+        console.log(trimmedPost)
+        }
     }
     window.onload = function() {
-        addNavItem()
+        trimPost
     }
+
+    
     </script>
 </body>
 
